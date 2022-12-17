@@ -1,0 +1,11 @@
+<div class="container d-flex align-items-center justify-content-between py-2"><h1><%= @task.title %></h1>
+<%= link_to "Edit this task", edit_path %></div>
+<h3 class="card p-3 mb-3 align-items-left justify-content-between"><%= @task.details %></h3>
+<% if @task.completed = true %>
+  <p><i class="fa-thin fa-square-check"></i> This task is completed</p>
+<% else %>
+  <p><i class="fa-light fa-square"></i> This task is not completed yet</p>
+<% end %>
+<p><%= link_to tasks_path do %>
+  <i class="fa-light fa-rotate-left"></i> Back to list
+<% end %></p>
